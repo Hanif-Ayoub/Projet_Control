@@ -1,0 +1,18 @@
+syntax="proto3";
+option java_package="ma.enset.radarservice.grpc.stubs";
+
+service radarDevice{
+  rpc getConnected(radarInformations) returns (stream infraction);
+}
+
+message radarInformations{
+  int64 radarId=1;
+  int64 radarMax=2;
+  repeated int64 matricules=3;
+}
+message infraction{
+  int64 radarNumber=1;
+  int64 vehiculeMatricule=2;
+  int64 vehiculeSpeed=3;
+  int64 maxSpeedRadar=4;
+}

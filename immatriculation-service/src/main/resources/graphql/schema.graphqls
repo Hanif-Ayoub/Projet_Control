@@ -1,0 +1,41 @@
+type Query {
+    vehiculesList:[Vehicule]
+    vehiculeById(id:Float):Vehicule
+    ownersList:[Owner]
+    ownerById(id:Float):Owner
+}
+type Mutation {
+    addVehicule(vehicule:VehiculeInput):Vehicule
+    updateVehicule(id:Float,vehicule:VehiculeInput):Vehicule
+    deleteVehicule(id:Float):String
+    addOwner(owner:OwnerInput):Owner
+    updateOwner(id:Float,owner:OwnerInput):Owner
+    deleteOwner(id:Float):String
+}
+type Vehicule{
+    id:Float
+    matricule_number:Float
+    model:String
+    marque:String
+    power:Float
+    owner:Owner
+}
+input VehiculeInput{
+    matricule_number:Float
+    model:String
+    marque:String
+    power:Float
+    owner:OwnerInput
+}
+type Owner{
+    id:Float
+    name:String
+    email:String
+    date_birth:Float
+    vehicules:[Vehicule]
+}
+input OwnerInput{
+    name:String
+    email:String
+    date_birth:Float
+}
