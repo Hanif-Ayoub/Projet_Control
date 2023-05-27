@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Date;
+import java.util.Random;
 import java.util.stream.Stream;
 
 @SpringBootApplication
@@ -31,8 +32,10 @@ public class ImmatriculationServiceApplication {
 						.email("email@email")
 						.build();
 				ownerRepository.save(owner);
+				Random random = new Random();
+				Long randomNumber = random.nextLong(90000) + 10000;
 				Vehicule vehicule=Vehicule.builder()
-						.matricule_number(12345L)
+						.matricule_number(randomNumber)
 						.model("model ABC")
 						.marque("marque ABC")
 						.power(999)

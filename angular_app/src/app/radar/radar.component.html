@@ -1,0 +1,58 @@
+<div class="container">
+  <nav *ngIf="authService.hasRole('ADMIN')" class="p-2 m-2 border border-info navigation-container">
+    <button class="btn btn-outline-info new-radar-button" (click)="handleNewRadar()">New Radar</button>
+  </nav>
+  <ng-template #errors>
+    <div class="text-bg-danger">
+      {{errorMessage}}
+    </div>
+  </ng-template>
+  <div class="card" *ngIf="radars, else errors">
+    <div class="card-header">LIST OF RADARS</div>
+    <div class="card-body">
+      <form [formGroup]="searchFormGroup" (ngSubmit)="handleSearchRadars()">
+        <div class="input-group">
+          <label class="input-group-text">Keyword</label>
+          <input type="text" class="form-control" formControlName="keyword">
+          <button class="btn btn-info">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>MAX SPEED</th>
+          <th>LATITUDE</th>
+          <th>LONGITUDE</th>
+          <th>STATE</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let r of radars">
+          <td>{{r.id}}</td>
+          <td>{{r.vitesseMax}}</td>
+          <td>{{r.latitude}}</td>
+          <td>{{r.longitude}}</td>
+          <td class="align-content-center">
+            <i *ngIf="r.state==true" class="bi bi-camera-fill text-success"></i>
+            <i *ngIf="r.state==false" class="bi bi-camera-fill text-danger"></i>
+          </td>
+          <td *ngIf="authService.hasRole('ADMIN')">
+            <button (click)="handleEditRadar(r)" class="btn btn-warning">
+              <i class="bi bi-pen"></i>
+            </button>
+          </td>
+         <td *ngIf="authService.hasRole('ADMIN')">
+            <button (click)="handleDeleteRadar(r)" class="btn btn-danger">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--
+<nav class="p-2 m-2 mb-3 border border-info navigation-container" >
+  <div class="d-flex justify-content-start align-items-center">
+    <div class="dropdown">
+      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Profile
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Profile Info 1</a></li>
+        <li><a class="dropdown-item" href="#">Profile Info 2</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="#">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+-->
+
+
+<section class="main-content">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-sm-4 offset-sm-2">
+        <div class="stat-card">
+          <div class="stat-card__content">
+            <p class="text-uppercase mb-1 text-muted">Radars</p>
+            <h2>{{radarNumber}}</h2>
+            <div>
+              <span class="text-success font-weight-bold mr-1"><i class="fa fa-arrow-up"></i> +5%</span>
+              <span class="text-muted">last 28 days</span>
+            </div>
+          </div>
+          <div class="stat-card__icon stat-card__icon--success">
+            <div class="stat-card__icon-circle">
+              <i class="fa fa-camera"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-sm-4">
+        <div class="stat-card">
+          <div class="stat-card__content">
+            <p class="text-uppercase mb-1 text-muted">Infractions</p>
+            <h2>{{infractionNumber}}</h2>
+            <div>
+              <span class="text-danger font-weight-bold mr-1"><i class="fa fa-arrow-down"></i> -5%</span>
+              <span class="text-muted">vs last 28 days</span>
+            </div>
+          </div>
+          <div class="stat-card__icon stat-card__icon--primary">
+            <div class="stat-card__icon-circle">
+              <i class="fa fa-dollar"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

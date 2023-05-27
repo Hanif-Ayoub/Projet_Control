@@ -5,8 +5,8 @@ option java_package="ma.enset.immatriculationservice.grpc.stubs";
 service ImmatriculationService{
   rpc getVehiculesList(ListRequest) returns (getVehiculesListResponse);
   rpc getOwnersList(ListRequest) returns (getOwnersListResponse);
-  //rpc getVehicule(id) returns (Vehicule);
-  //rpc getOwner(id) returns (Vehicule);
+  rpc getVehicule(id) returns (Vehicule);
+  rpc getOwner(id) returns (Vehicule);
 }
 message ListRequest{}
 message getVehiculesListResponse{

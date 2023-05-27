@@ -27,13 +27,10 @@ public class RadarDeviceApplication {
             System.out.println(infractionRestController.getAllMatricules());
             List<Long> matricules=infractionRestController.getAllMatricules();
             List<Radar> radars=infractionRestController.getAllRadars();
-            // Create a timer
             Timer timer = new Timer();
-            // Create a timer task
             TimerTask task = new TimerTask() {
                 @Override
                 public void run() {
-                    // Do something every 2 seconds
                     int randomIndexRadar = random.nextInt(radars.size());
                     int randomIndexMatricule = random.nextInt(matricules.size());
                     int randomSpeed = random.nextInt(101) + 50;
@@ -53,8 +50,7 @@ public class RadarDeviceApplication {
                 }
             };
 
-            // Schedule the task to run every 2 seconds
-            timer.schedule(task, 0, 10000);
+            timer.schedule(task, 0, 1000);
         };
     }
 

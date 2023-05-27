@@ -1,0 +1,85 @@
+/* CONTAINER */
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+.card-header{
+  background: #337ab7;
+}
+
+.text-center{
+  color: #f0f0f0;
+}
+
+.id{
+  width: 50%;
+}
+
+.form-label{
+  background: #337ab7;
+  border-radius: 10px;
+  width: 120px;
+  text-align: center;
+  margin-top: 10px;
+  color: #f0f0f0;
+}
+/* FORM */
+.form {
+  width: 100%;
+}
+
+
+
+/* CARD */
+.card {
+  border-radius: 5px;
+  box-shadow: 0 0 5px 0 #ccc;
+  margin-bottom: 10px;
+}
+
+.card-header {
+  padding: 10px;
+  background-color: #eee;
+  font-weight: bold;
+}
+
+.card-body {
+  padding: 10px;
+}
+
+/* INPUT GROUP */
+.input-group {
+  width: 100%;
+}
+
+.input-group-text {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.btn-info {
+  background-color: #337ab7;
+  color: white;
+}
+
+/* CHECKBOX */
+.form-check-input {
+  margin-top: 7px;
+}
+
+/* ERROR MESSAGE */
+.text-danger {
+  color: #f44336;
+}
