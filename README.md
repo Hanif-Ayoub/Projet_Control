@@ -285,4 +285,4 @@ and sending them to the Radar-Service.
 <p></p>
 <p></p>
 
-<a href="https://github.com/Hanif-Ayoub/Projet_Control/captures/RAPPORT_CONTROLE.pdf">`Click here to see the report`</a>
+<a href="https://github.com/Hanif-Ayoub/Projet_Control/blob/main/captures/RAPPORT_CONTROLE.pdf">`Click here to see the report`</a>
